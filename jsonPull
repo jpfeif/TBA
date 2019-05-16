@@ -1,0 +1,8 @@
+import json
+import numbers
+import requests
+import pycurl
+event = "2019wimi"
+eventTeams = "https://www.thebluealliance.com/api/v3/event/" + event + "/teams" 
+teams = requests.get(eventTeams, params={'X-TBA-Auth-Key': 'oJ8q81FBEVKJlR3rVaVKhgJ3nGxjeGNy44DktYMHxdtBRjTPLBI2hIZX95SRNxXk'}, headers={'accept':'text/json'})
+print(teams)
