@@ -1,4 +1,5 @@
 import requests
+import json
 
 
 event = "2019wimi"
@@ -9,6 +10,12 @@ teams = requests.get(eventTeams, params={'X-TBA-Auth-Key': 'oJ8q81FBEVKJlR3rVaVK
 
 data = teams.json()
 
-for x in data:
-    print (x['name'])
-    print (x['address'])
+for key in data:
+    print (key['key'])
+
+teamCount = len(data)
+while teamCount != 0:
+    teamCount = teamCount - 1
+    teamNum = data.split(teamCount)
+    print(teamCount)
+    
